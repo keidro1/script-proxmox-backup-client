@@ -1,0 +1,9 @@
+# script-proxmox-backup-client
+# i did it with Ubuntu 16.04.7 LTS
+# set environmental variable
+# we need to create file .sh first Example: mkdir Test.sh ()
+export PBS_REPOSITORY="user@type@IP:test-client" #Export information user which is provided by proxmox backup server
+export PBS_PASSWORD="password_user_here" 
+export PBS_FINGERPRINT="32:81:...:89:d8" #Fingerprint of Proxmox Backup Server
+proxmox-backup-client backup root.pxar:/root --repository user@type@IP:test-client #Example: Back up /root (vps client)
+
